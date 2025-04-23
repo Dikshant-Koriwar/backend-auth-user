@@ -58,7 +58,8 @@ const registerUser = async (req, res) => {
       from: process.env.MAILTRAP_SENDER_EMAIL,
       to: user.email,
       subject: "Verify your email",
-      text: `Please click on the following link to verify your email: ${process.env.BASE_URL}/api/v1/users/verify/${token}`,
+      text: `Please click on the 
+      following link to verify your email: ${process.env.BASE_URL}/api/v1/users/verify/${token}`,
     };
 
     await transporter.sendMail(mailOptions);
